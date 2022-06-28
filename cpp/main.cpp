@@ -35,7 +35,9 @@ int main() {
   auto matcEmail = std::find_if(std::begin(emails), std::end(emails), [](const Emails &me) { return me.id == 1; });
 
   JoinedData result;
-  result = {matchUser->id, matchUser->Name, matcEmail->address};
+  if (matchUser != std::end(users) && matcEmail != std::end(emails)) {
+    result = {matchUser->id, matchUser->Name, matcEmail->address};
+  }
 
   CheckJoin(result);
 
