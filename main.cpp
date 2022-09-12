@@ -33,6 +33,13 @@ std::map<int, std::pair<std::string, std::string>> Joiner() {
       iterator->second.second = email.address;
     }
   }
+
+  /*
+  for(const auto& elem : result)
+  {
+     std::cout << elem.first << " " << elem.second.first << " " << elem.second.second << "\n";
+  }
+  */
   return result;
 }
 
